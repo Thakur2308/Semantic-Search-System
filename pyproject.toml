@@ -1,0 +1,19 @@
+[project]
+name = "semantic-search-system"
+version = "0.1.0"
+description = "A semantic search system using embeddings and vector similarity."
+readme = "README.md"
+requires-python = ">=3.13,<3.15"
+
+dependencies = [
+    "numpy>=2.3,<3.0",
+    "openai>=2.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit",
+    "ruff",
+    "pytest",
+    "mypy",
+]
