@@ -1,0 +1,33 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        tpye: [text]
+        exclude: "\\.ipynb$"
+      - id: end-of-file-fixer
+        tpye: [text]
+        exclude: "\\.ipynb$"
+      - id: check-yaml
+        tpye: [yaml]
+        exclude: "\\.ipynb$"
+      - id: check-merge-conflict
+        tpye: [text]
+        exclude: "\\.ipynb$"
+      - id: pretty-format-json
+        tpye: [json]
+        exclude: "\\.ipynb$"
+        args: ["--autofix", "--indent", "2"]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.4
+    hooks:
+      - id: ruff
+        args: [--fix]
+        always_run: true
+        type: [python]
+        exclude: "\\.ipynb$"
+      - id: ruff-format
+        always_run: true
+        type: [python]
+        exclude: "\\.ipynb$"
